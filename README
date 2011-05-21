@@ -1,0 +1,18 @@
+See the INSTALL file for an explanation of the compilation and installation procedure.  
+
+EXTERNAL LIBRARIES 
+
+Binaries and headers of the following libraries are required:  
+
+gtkmm-2.4 >= 2.12 
+gtkglextmm-1.2
+cairomm-1.0 
+gl 
+glu
+boost >= 1.42
+
+COMPILER
+
+The code uses many features of the upcoming C++ standard (C++0x) which have to be supported by the compiler.
+To ensure proper compilation, gcc >= 4.5 is recommended as the default compiler.
+    
