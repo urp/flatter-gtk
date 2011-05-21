@@ -1,0 +1,29 @@
+
+[Anjuta]
+Maximized=1
+Geometry=1680x995+0+26
+
+[Project Manager]
+Shortcut=flatter-gtk//flatter-gtk//src//gtk_flatter%%%flatter-gtk//flatter-gtk//src//cli_measure
+Expand=flatter-gtk%%%flatter-gtk//flatter-gtk%%%flatter-gtk//flatter-gtk//src%%%flatter-gtk//flatter-gtk//src//cli_flatter
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
+[Execution]
+Program arguments=--generator random --solver mds%%%--max-iterations 10 --solver "mds" --h 0.2 --generator random%%% --max-iterations 10 --solver "mds" --h 0.2 --generator random%%%--solver spring subspace --max_iterations 1000%%%--max_iterations 1000%%%--max_iterations 100
+Program uri=file:///media/usbMobile/flatter/build/debug/src/cli_flatter%%%file:///media/usbMobile/flatter/build/debug/src/gtk_flatter%%%file:///media/usbMobile/flatter/build/optimized/src/gtk_flatter
+Run in terminal=2
+Working directories=file:///media/usbMobile/flatter%%%file:///media/usbMobile
+
+[Build]
+Configuration list=1:Default:%%%1:Debug:build/debug%%%1:Profiling:Profiling%%%1:Optimized:build/optimized
+Selected Configuration=Debug
+BuildArgs/Default=--enable-maintainer-mode
+BuildArgs/Debug=--enable-maintainer-mode 'CFLAGS=-g -O0 ' 'CXXFLAGS=-g -O0' 'JFLAGS=-g -O0' 'FFLAGS=-g -O0'
+BuildArgs/Profiling=--enable-maintainer-mode 'CFLAGS=-g -pg' 'CXXFLAGS=-g -pg' 'JFLAGS=-g -pg' 'FFLAGS=-g -pg'
+BuildArgs/Optimized=--enable-maintainer-mode 'CFLAGS=-O2 -DNDEBUG' 'CXXFLAGS=-O2 -DNDEBUG' 'JFLAGS=-O2' 'FFLAGS=-O2'
+
+[Debugger]
+Watch=\sij%%% get_surface()->vertex( id ).location()%%% e2ray.length()%%% friction_exponent
+Stop at beginning=2

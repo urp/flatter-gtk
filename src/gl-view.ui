@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy toplevel-contextual -->
+  <object class="GtkVBox" id="gl_view_main_vbox">
+    <property name="width_request">400</property>
+    <property name="height_request">400</property>
+    <property name="visible">True</property>
+    <child>
+      <object class="GtkDrawingArea" id="gl_canvas">
+        <property name="visible">True</property>
+        <property name="events">GDK_BUTTON_MOTION_MASK | GDK_BUTTON1_MOTION_MASK | GDK_BUTTON2_MOTION_MASK | GDK_BUTTON3_MOTION_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_STRUCTURE_MASK | GDK_SCROLL_MASK</property>
+      </object>
+      <packing>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkHBox" id="gl_canvas_controls_hbox">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkToolbar" id="glview_toolbar">
+            <property name="visible">True</property>
+            <property name="toolbar_style">both-horiz</property>
+            <property name="icon_size">1</property>
+            <property name="icon_size_set">True</property>
+            <child>
+              <object class="GtkToolButton" id="save_frame_as_button">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Save Frame</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-save-as</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleToolButton" id="record_frames_toggle">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Record Frames</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-media-record</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbutton1">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolItem" id="toolbutton2">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkCheckButton" id="show_pivot_checkbutton">
+                    <property name="label" translatable="yes">_pivot</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="use_underline">True</property>
+                    <property name="draw_indicator">True</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolItem" id="toolbutton3">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkCheckButton" id="show_origin_checkbutton">
+                    <property name="label" translatable="yes">_origin</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="use_underline">True</property>
+                    <property name="draw_indicator">True</property>
+                    <signal name="toggled" handler="on_coords_checkbutton_toggled"/>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbutton4">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkMenuToolButton" id="render_target_toolmenu">
+                <property name="visible">True</property>
+                <property name="visible_vertical">False</property>
+                <property name="label" translatable="yes">target</property>
+                <property name="stock_id">gtk-connect</property>
+                <property name="menu">render_mode_menu</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+  </object>
+  <object class="GtkMenu" id="render_mode_menu">
+    <property name="visible">True</property>
+    <property name="ubuntu_local">True</property>
+    <child>
+      <object class="GtkMenuItem" id="window_render_target_item">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">window</property>
+        <property name="use_underline">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="pixmap_window_target_item">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">pixmap -&gt; window</property>
+        <property name="use_underline">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="pixmap_render_target_item">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">pixmap</property>
+        <property name="use_underline">True</property>
+      </object>
+    </child>
+  </object>
+</interface>
