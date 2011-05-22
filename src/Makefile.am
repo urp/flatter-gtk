@@ -73,8 +73,7 @@ cli_flatter_SOURCES = \
 	gl-tools.cpp
 
 cli_flatter_CXXFLAGS = \
-	-std=c++0x \
-	-I$(top_srcdir)/../libutk/include
+	-std=c++0x
 
 cli_flatter_LDADD = \
 	-lboost_program_options \
@@ -127,7 +126,6 @@ cli_measure_SOURCES =  \
 	gl-tools.h
 
 cli_measure_CXXFLAGS = -std=c++0x \
-	-I$(top_srcdir)/../libutk/include \
 	-DUSE_FLAT_MMP_VISUALIZE_GTK_OBSERVER
 
 cli_measure_LDADD = -lboost_program_options \
@@ -206,8 +204,7 @@ gtk_flatter_SOURCES = \
 	gl-tools.h
 
 gtk_flatter_CXXFLAGS = \
-	-std=c++0x \
-	-I$(top_srcdir)/../libutk/include
+	-std=c++0x
 
 gtk_flatter_LDFLAGS = 
 
@@ -221,3 +218,7 @@ EXTRA_DIST = $(ui_DATA)
 uninstall-local:
 	-rm -r $(uidir)
 	-rm -r $(datadir)/gtk_flatter
+
+
+SUBDIRS = \
+	utk

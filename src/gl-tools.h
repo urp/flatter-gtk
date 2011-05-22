@@ -18,8 +18,8 @@
 
 #pragma once
 
-#include	"utk/refptr.h"
-#include	"utk/numtypes.h"
+//#include	"utk/refptr.h"
+#include	"utk/vecn.h"
 #include	"utk/inertial.h"
 
 //#define	DB_FLAT_GL_TOOLS

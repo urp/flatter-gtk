@@ -4,8 +4,11 @@ Maximized=1
 Geometry=1680x995+0+26
 
 [Project Manager]
-Shortcut=flatter-gtk//flatter-gtk//src//gtk_flatter%%%flatter-gtk//flatter-gtk//src//cli_measure
-Expand=flatter-gtk%%%flatter-gtk//flatter-gtk%%%flatter-gtk//flatter-gtk//src%%%flatter-gtk//flatter-gtk//src//cli_flatter
+Shortcut=%%%%%%%%%
+Expand=flatter%%%flatter//flatter%%%flatter//flatter//src%%%flatter//flatter//src//gtk_flatter
+
+[File Loader]
+Files=file:///media/usbMobile/flatter/src/common.h#28%%%file:///media/usbMobile/flatter/src/utk-vecn.h#22
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n

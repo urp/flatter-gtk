@@ -24,8 +24,8 @@
  
 # pragma once
 
-# include "utk/basic_math.h"
-# include "utk/numtypes.h"
+# include "utk/math.h"
+# include "utk/vecn.h"
 
 # include <boost/shared_ptr.hpp>
 # include <boost/bind.hpp>

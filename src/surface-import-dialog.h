@@ -21,10 +21,9 @@
 
 # include "gtkmm.h"
 
-# include "utk/numtypes.h"
+# include "utk/vecn.h"
 
 # include "interface.h"
-
 # include "controller.h"
 
 namespace gtk

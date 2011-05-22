@@ -25,4 +25,5 @@ PKG_CHECK_MODULES(GTK_FLATTER, [gtkmm-2.4 >= 2.12 gtkglextmm-1.2 cairomm-1.0 gl 
 AC_OUTPUT([
 Makefile
 src/Makefile
-])
+
+src/utk/Makefile])
